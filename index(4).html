@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173d4b">
+  <meta name="description" content="Maria Zuzarte — terapeuta integrativa. Atendimento Integrativo, Radiestesia e Radiônica, Reiki e Barras de Access. Atendimentos principalmente a distância.">
+  <title>Maria Zuzarte | Terapeuta Integrativa</title>
+  <style>
+    :root {
+      --navy: #173d4b;
+      --blue: #2e6675;
+      --teal: #477f78;
+      --sage: #dce9e2;
+      --pale: #f5f8f5;
+      --cream: #fbfaf6;
+      --gold: #bd9b5b;
+      --ink: #263a3d;
+      --muted: #647477;
+      --white: #fff;
+      --shadow: 0 18px 50px rgba(24, 57, 64, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: Georgia, 'Times New Roman', serif; line-height: 1.65; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-weight: 400; line-height: 1.15; }
+    p, nav, .eyebrow, .button, .brand small, .service-tag, footer, .step-number, .photo-placeholder small { font-family: Arial, Helvetica, sans-serif; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 44px)); margin: 0 auto; }
+    .topbar { position: sticky; top: 0; z-index: 20; background: rgba(251,250,246,.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(23,61,75,.09); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { text-decoration: none; color: var(--navy); display: flex; flex-direction: column; line-height: 1.1; flex-shrink: 0; }
+    .brand strong { font-size: 23px; font-weight: 400; letter-spacing: .02em; }
+    .brand small { margin-top: 6px; color: var(--teal); letter-spacing: .19em; text-transform: uppercase; font-size: 9px; }
+    .nav-right { display: flex; align-items: center; gap: 24px; }
+    .navlinks { display: flex; align-items: center; gap: 24px; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
+    .navlinks a { text-decoration: none; color: var(--navy); }
+    .navlinks a:hover, .footer-links a:hover { color: var(--gold); }
+    .nav-contact { color: var(--navy); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font: 12px Arial, sans-serif; white-space: nowrap; }
+    .nav-contact svg { width: 19px; height: 19px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 3px; padding: 14px 21px; text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; transition: .2s ease; text-align: center; }
+    .button.primary { background: var(--navy); color: white; border: 1px solid var(--navy); }
+    .button.primary:hover { background: var(--teal); border-color: var(--teal); transform: translateY(-2px); }
+    .button.outline { border: 1px solid rgba(23,61,75,.35); color: var(--navy); }
+    .button.outline:hover { border-color: var(--gold); color: var(--teal); }
+    .hero { position: relative; overflow: hidden; background: linear-gradient(115deg, #eaf1ec 0%, #f8f7f1 58%, #e5efeb 100%); padding: 78px 0 76px; }
+    .hero:before, .hero:after { content: ''; position: absolute; border: 1px solid rgba(189,155,91,.30); border-radius: 50%; pointer-events: none; }
+    .hero:before { width: 520px; height: 520px; right: -180px; top: -250px; }
+    .hero:after { width: 390px; height: 390px; right: -115px; top: -185px; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.08fr .92fr; gap: 64px; align-items: center; }
+    .eyebrow { color: var(--teal); text-transform: uppercase; letter-spacing: .22em; font-size: 10px; font-weight: 600; margin-bottom: 19px; }
+    .hero h1 { color: var(--navy); font-size: clamp(39px, 4.8vw, 62px); max-width: 650px; margin-bottom: 22px; }
+    .hero h1 em { color: var(--teal); font-weight: 400; }
+    .hero-copy { color: #526568; font-size: 16px; max-width: 560px; margin-bottom: 29px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .photo-placeholder { position: relative; overflow: hidden; display: grid; place-items: center; min-height: 430px; border: 1px solid rgba(189,155,91,.55); background: linear-gradient(145deg, #dce9e2, #f5f7f2 58%, #e7efea); box-shadow: var(--shadow); }
+    .photo-placeholder:before, .photo-placeholder:after { content: ''; position: absolute; border: 1px solid rgba(71,127,120,.23); border-radius: 50%; width: 340px; height: 340px; }
+    .photo-placeholder:after { width: 260px; height: 260px; border-color: rgba(189,155,91,.42); }
+    .photo-placeholder .placeholder-inner { position: relative; z-index: 1; text-align: center; color: var(--teal); padding: 25px; }
+    .placeholder-inner svg { width: 42px; height: 42px; margin-bottom: 12px; stroke: var(--gold); }
+    .placeholder-inner small { display: block; font-size: 10px; text-transform: uppercase; letter-spacing: .16em; }
+    .section { padding: 84px 0; }
+    .section.soft { background: var(--pale); }
+    .section.dark { background: var(--navy); color: #edf3ef; }
+    .section-heading { max-width: 760px; margin: 0 auto 45px; text-align: center; }
+    .section-heading h2 { font-size: clamp(31px, 4vw, 44px); color: var(--navy); margin-bottom: 15px; }
+    .dark .section-heading h2 { color: white; }
+    .section-heading p { color: var(--muted); font-size: 14px; }
+    .dark .section-heading p { color: #c2d1ce; }
+    .intro-grid { display: grid; grid-template-columns: .78fr 1.22fr; gap: 62px; align-items: center; }
+    .quote-panel { min-height: 340px; background: linear-gradient(145deg, #dce9e2, #f5f7f2); border: 1px solid rgba(189,155,91,.5); display: flex; align-items: center; justify-content: center; padding: 38px; text-align: center; }
+    .quote-panel blockquote { margin: 0; max-width: 340px; color: var(--navy); font-size: 27px; line-height: 1.38; }
+    .quote-panel span { display: block; color: var(--gold); font-size: 27px; margin-bottom: 15px; }
+    .intro-copy h2 { color: var(--navy); font-size: 37px; margin-bottom: 18px; }
+    .intro-copy p { color: #596b6d; font-size: 14px; }
+    .intro-action { margin-top: 12px; }
+    .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 19px; }
+    .service { background: white; padding: 32px 32px 30px; border: 1px solid rgba(23,61,75,.10); box-shadow: 0 8px 30px rgba(24,57,64,.035); position: relative; }
+    .service.featured { border-top: 3px solid var(--gold); }
+    .service-number { font: 10px Arial, sans-serif; letter-spacing: .14em; color: var(--gold); text-transform: uppercase; }
+    .service h3 { color: var(--navy); font-size: 27px; margin: 13px 0 13px; }
+    .service p { color: var(--muted); font-size: 13px; margin-bottom: 0; }
+    .service-tag { display: inline-block; margin-top: 18px; color: var(--teal); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+    .services-action { text-align: center; margin-top: 35px; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .step { border-top: 1px solid rgba(189,155,91,.65); padding-top: 22px; }
+    .step-number { font-size: 10px; color: var(--gold); letter-spacing: .16em; }
+    .step h3 { color: white; font-size: 24px; margin: 12px 0; }
+    .step p { color: #c2d1ce; font-size: 13px; }
+    .about-grid { display: grid; grid-template-columns: .82fr 1.18fr; gap: 62px; align-items: start; }
+    .about-photo { overflow: hidden; border: 1px solid rgba(189,155,91,.55); box-shadow: var(--shadow); background: #e7efea; }
+    .about-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center center; }
+    .about-copy h2 { color: var(--navy); font-size: 39px; margin-bottom: 20px; }
+    .about-copy p { color: #596b6d; font-size: 13px; }
+    .about-signature { color: var(--teal); font-size: 22px; font-style: italic; margin-top: 23px; }
+    .closing { text-align: center; max-width: 760px; margin: 0 auto; }
+    .closing h2 { color: var(--navy); font-size: clamp(33px, 4vw, 47px); margin-bottom: 16px; }
+    .closing p { color: var(--muted); margin-bottom: 26px; font-size: 14px; }
+    footer { background: #102f3a; color: #d5e1dc; padding: 32px 0; font-size: 11px; }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 22px; flex-wrap: wrap; }
+    .footer-brand { font-family: Georgia, serif; font-size: 17px; color: white; }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
+    .footer-links a { text-decoration: none; color: #e5d3a9; display: inline-flex; align-items: center; gap: 7px; }
+    .footer-links svg { width: 16px; height: 16px; }
+    .disclaimer { font-size: 10px; color: #aebfbb; margin: 18px 0 0; max-width: 900px; }
+    @media (max-width: 850px) {
+      .nav { min-height: 70px; }
+      .nav-right { gap: 15px; }
+      .navlinks { gap: 14px; }
+      .nav-contact span { display: none; }
+      .hero-grid { gap: 35px; }
+      .photo-placeholder { min-height: 370px; }
+      .intro-grid, .about-grid { gap: 38px; }
+    }
+    @media (max-width: 680px) {
+      html { scroll-padding-top: 115px; }
+      .wrap { width: min(100% - 34px, 1120px); }
+      .nav { padding: 12px 0; align-items: center; }
+      .brand strong { font-size: 19px; }
+      .brand small { font-size: 8px; }
+      .nav-right { gap: 12px; }
+      .navlinks { max-width: 205px; justify-content: flex-end; flex-wrap: wrap; gap: 8px 13px; font-size: 9px; }
+      .nav-contact { padding: 7px; border: 1px solid rgba(23,61,75,.18); border-radius: 50%; }
+      .hero { padding: 55px 0 52px; }
+      .hero-grid, .intro-grid, .about-grid { grid-template-columns: 1fr; gap: 30px; }
+      .hero h1 { font-size: clamp(38px, 10vw, 49px); }
+      .hero-copy { font-size: 14px; }
+      .photo-placeholder { min-height: 340px; }
+      .section { padding: 62px 0; }
+      .quote-panel { min-height: 220px; }
+      .quote-panel blockquote { font-size: 24px; }
+      .services { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 18px; }
+      .step { padding-top: 17px; }
+      .about-photo img { aspect-ratio: 4 / 3; }
+      .footer-row { align-items: flex-start; flex-direction: column; }
+      .footer-links { gap: 13px 18px; }
+    }
+    @media (max-width: 390px) {
+      .wrap { width: calc(100% - 28px); }
+      .navlinks { max-width: 175px; gap: 7px 10px; }
+      .hero-actions .button { width: 100%; }
+      .service { padding: 26px 23px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Maria Zuzarte - início">
+        <strong>Maria Zuzarte</strong>
+        <small>Terapeuta Integrativa</small>
+      </a>
+      <div class="nav-right">
+        <nav class="navlinks" aria-label="Navegação principal">
+          <a href="#abordagem">Abordagem</a>
+          <a href="#servicos">Terapias</a>
+          <a href="#sobre">Sobre mim</a>
+        </nav>
+        <a class="nav-contact" href="https://wa.me/5522981197750?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20atendimentos%20%F0%9F%98%8A" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.5 8.5c.3 2.7 2.3 4.7 5 5l1.1-1.1 2 .9c-.2 1.2-1.1 2-2.4 2-3.7-.2-6.8-3.3-7-7 0-1.3.8-2.2 2-2.4l.9 2-1.6.6Z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Autoconhecimento · Consciência · Novas possibilidades</div>
+          <h1>Você sente que algo precisa mudar, mas ainda não consegue enxergar um caminho?</h1>
+          <p class="hero-copy">Um convite para olhar para dentro, compreender os padrões que se repetem e descobrir novas possibilidades para a sua vida.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://wa.me/5522981197750?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20atendimentos%20%F0%9F%98%8A" target="_blank" rel="noopener">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+            <a class="button outline" href="#abordagem">Minha abordagem</a>
+          </div>
+        </div>
+        <div class="photo-placeholder hero-photo" role="img" aria-label="Espaço reservado para uma foto de apresentação de Maria Zuzarte">
+          <div class="placeholder-inner">
+            <svg viewBox="0 0 48 48" fill="none" stroke-width="1.3" aria-hidden="true"><circle cx="24" cy="16" r="8"/><path d="M8 42c1.5-9 7-14 16-14s14.5 5 16 14"/><path d="M5 5h8M5 5v8M43 5h-8M43 5v8M5 43h8M5 43v-8M43 43h-8M43 43v-8"/></svg>
+            <small>Foto de apresentação</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="abordagem">
+      <div class="wrap intro-grid">
+        <div class="quote-panel">
+          <blockquote><span>✧</span>Você não precisa continuar vivendo no automático, repetindo padrões que já não fazem sentido.</blockquote>
+        </div>
+        <div class="intro-copy">
+          <div class="eyebrow">Minha abordagem</div>
+          <h2>Um olhar mais profundo sobre você e sobre sua vida.</h2>
+          <p>Cada pessoa carrega uma história, experiências, emoções e crenças que influenciam a maneira como vive, sente e se relaciona com o mundo. Por isso, meu trabalho começa pela compreensão do momento de vida de cada pessoa, de suas questões individuais e dos padrões que se repetem em sua vida.</p>
+          <p>Através da conversa, da investigação e de diferentes ferramentas integrativas e energéticas, busco trazer clareza sobre padrões e aspectos que muitas vezes passam despercebidos. A proposta é olhar para cada pessoa de forma integral, respeitando sua individualidade.</p>
+          <p>Acredito que as ferramentas podem ser importantes aliadas nos processos de transformação, mas minha principal missão é inspirar você a expandir sua consciência, compreender melhor a si mesmo e reconhecer novas possibilidades. Quero contribuir para que você retome o protagonismo da sua história, desenvolva uma relação mais consciente consigo mesmo e encontre caminhos para construir a vida que deseja viver.</p>
+          <div class="intro-action"><a class="button outline" href="#servicos">Conheça as terapias</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="servicos">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Terapias e ferramentas</div>
+          <h2>Caminhos para investigar, cuidar e transformar</h2>
+          <p>As ferramentas são escolhidas de acordo com as questões e os objetivos de cada atendimento. As sessões são realizadas principalmente a distância.</p>
+        </div>
+        <div class="services">
+          <article class="service featured">
+            <span class="service-number">01 · Uma proposta personalizada</span>
+            <h3>Atendimento Integrativo</h3>
+            <p>Um espaço de escuta, investigação e autoconhecimento para compreender seu momento de vida, explorar questões pessoais e identificar padrões que influenciam sua forma de pensar, sentir e agir. A partir dessa compreensão, diferentes ferramentas e abordagens integrativas e energéticas podem ser combinadas de forma personalizada, de acordo com suas questões e objetivos, contribuindo para a expansão da consciência e a transformação pessoal.</p>
+            <span class="service-tag">Escuta · Investigação · Autoconhecimento</span>
+          </article>
+          <article class="service">
+            <span class="service-number">02 · Investigação e atuação energética</span>
+            <h3>Radiestesia e Radiônica</h3>
+            <p>A radiestesia é uma ferramenta de investigação energética que auxilia na identificação de possíveis desequilíbrios, na percepção de padrões e na investigação de aspectos que podem estar relacionados às questões emocionais e aos desafios vividos. A partir dessa investigação e da clareza sobre os aspectos que precisam ser trabalhados, a radiônica é utilizada como ferramenta de atuação energética, com o objetivo de trabalhar essas questões e desequilíbrios por meio de gráficos radiônicos.</p>
+            <span class="service-tag">Atendimento principalmente a distância</span>
+          </article>
+          <article class="service">
+            <span class="service-number">03 · Harmonização energética</span>
+            <h3>Reiki</h3>
+            <p>Uma prática de origem japonesa que envolve a transmissão de energia vital por meio da imposição das mãos. É utilizada para promover a harmonização energética, favorecer processos de cura física e emocional e contribuir para estados de relaxamento profundo, serenidade e alinhamento espiritual.</p>
+            <span class="service-tag">Pode ser realizado a distância</span>
+          </article>
+          <article class="service">
+            <span class="service-number">04 · Relaxamento e liberação</span>
+            <h3>Barras de Access</h3>
+            <p>Uma técnica de toque suave em pontos específicos da cabeça, associada à proposta de favorecer a liberação de padrões mentais e emocionais e a dissolução de bloqueios que podem limitar a forma de pensar e agir. Também proporciona profundo relaxamento, contribuindo para estados de paz e bem-estar.</p>
+            <span class="service-tag">Atendimento presencial</span>
+          </article>
+        </div>
+        <div class="services-action">
+          <a class="button primary" href="https://wa.me/5522981197750?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20atendimentos%20%F0%9F%98%8A" target="_blank" rel="noopener">Quero saber mais sobre os atendimentos <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="como-funciona">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Como funciona</div>
+          <h2>Um caminho construído com você</h2>
+          <p>Cada atendimento considera sua história, suas questões e aquilo que você deseja compreender ou transformar.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="step-number">01</span><h3>Escuta e compreensão</h3><p>Conhecer sua história, seu momento de vida e seus objetivos, aprofundando a compreensão das suas questões por meio da escuta e da investigação.</p></div>
+          <div class="step"><span class="step-number">02</span><h3>Cuidado e transformação</h3><p>Utilizar técnicas e ferramentas integrativas e energéticas, escolhidas de acordo com suas necessidades e objetivos, para trabalhar as questões identificadas.</p></div>
+          <div class="step"><span class="step-number">03</span><h3>Consciência e autonomia</h3><p>Ampliar a compreensão sobre si mesmo e descobrir novas perspectivas e possibilidades.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="wrap about-grid">
+        <div class="about-photo">
+          <img src="foto-maria-zuzarte-barras-access.jpg" alt="Maria Zuzarte realizando um atendimento de Barras de Access" loading="lazy">
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Um pouco da minha história</div>
+          <h2>Prazer, sou a Maria Zuzarte.</h2>
+          <p>Sou Maria Zuzarte, formada em Terapias Integrativas e Saúde Mental, com conhecimentos e formações em diferentes técnicas e ferramentas energéticas, holísticas e espirituais, como Reiki, Barras de Access, Radiestesia e Radiônica. Também sou apaixonada por astrologia, cristais, espiritualidade e pelas diferentes formas de compreender o ser humano e sua consciência.</p>
+          <p>Desde a adolescência, sou fascinada por temas relacionados à psicologia, ao desenvolvimento pessoal, ao misticismo, ao ocultismo e à espiritualidade. Sempre fui uma buscadora, movida por uma vontade profunda de conhecer a mim mesma, compreender o funcionamento da mente humana, explorar os mistérios da existência e expandir a consciência.</p>
+          <p>Acredito que o autoconhecimento é um caminho de transformação. Quando nos permitimos olhar para dentro, reconhecer nossos padrões, compreender nossas emoções e assumir a responsabilidade pelo nosso próprio crescimento, começamos a transformar não apenas a nossa vida, mas também a maneira como nos relacionamos com o mundo.</p>
+          <p><strong>Minha missão é inspirar pessoas a buscarem o autoconhecimento, o cuidado e o desenvolvimento pessoal.</strong> Quero contribuir para que cada pessoa reconheça seu próprio potencial e encontre mais equilíbrio, liberdade e satisfação na vida. Acredito que um mundo melhor também começa pelas transformações individuais: quando cada um se compromete com o próprio crescimento, essa mudança alcança as pessoas ao redor.</p>
+          <div class="about-signature">Maria Zuzarte</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="contato">
+      <div class="wrap closing">
+        <div class="eyebrow">Seu próximo passo</div>
+        <h2>Vamos conversar?</h2>
+        <p>Se algo em você sente que é hora de olhar para dentro, compreender melhor seu momento e abrir espaço para novas possibilidades, será um prazer conversar com você.</p>
+        <a class="button primary" href="https://wa.me/5522981197750?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20atendimentos%20%F0%9F%98%8A" target="_blank" rel="noopener">Conversar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-row">
+        <div class="footer-brand">Maria Zuzarte <span style="font:10px Arial,sans-serif;color:#b8c9c2;display:block;margin-top:5px;letter-spacing:.12em;text-transform:uppercase">Terapeuta Integrativa</span></div>
+        <div class="footer-links">
+          <a href="https://wa.me/5522981197750?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20atendimentos%20%F0%9F%98%8A" target="_blank" rel="noopener" aria-label="WhatsApp (22) 98119-7750">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.7A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.5 8.5c.3 2.7 2.3 4.7 5 5l1.1-1.1 2 .9c-.2 1.2-1.1 2-2.4 2-3.7-.2-6.8-3.3-7-7 0-1.3.8-2.2 2-2.4l.9 2-1.6.6Z"/></svg>
+            WhatsApp · (22) 98119-7750
+          </a>
+          <a href="https://www.instagram.com/maria.zuzarte/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @maria.zuzarte">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+            @maria.zuzarte
+          </a>
+          <a href="https://share.google/t0UC7ECtPNfrgPn7k" target="_blank" rel="noopener noreferrer" aria-label="Perfil da empresa no Google">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            Perfil no Google
+          </a>
+        </div>
+      </div>
+      <p class="disclaimer">As práticas apresentadas têm caráter integrativo e energético e não substituem acompanhamento médico, psicológico ou outros cuidados profissionais de saúde quando necessários.</p>
+    </div>
+  </footer>
+</body>
+</html>
